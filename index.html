@@ -1,123 +1,41 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Countdown</title>
+	<link type="text/css" href="demo.css?v=1.0.0" rel="stylesheet">
+	<link type="text/css" href="https://rawgit.com/epiksel/countdown/master/jquery.countdown.css" rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/epiksel/countdown/master/jquery.countdown.min.js"></script>
+</head>
+<body>
+	<ul id="example">
+		<li><span class="days">00</span><p class="days_text">Dagen</p></li>
+		<li class="seperator">:</li>
+		<li><span class="hours">00</span><p class="hours_text">Uren</p></li>
+		<li class="seperator">:</li>
+		<li><span class="minutes">00</span><p class="minutes_text">Minuten</p></li>
+		<li class="seperator">:</li>
+		<li><span class="seconds">00</span><p class="seconds_text">Seconden</p></li>
+	</ul>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Countdown : jQuery CountDown Clock - Simple countdown plugin for product special offers">
+	<script type="text/javascript">
+		var now = new Date();
+		var day = 2;
+		var month = 7 + 1;
+		var year = now.getFullYear();
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		var nextyear = month + '/' + day + '/' + year + ' 10:00:00';
 
-    <title>Countdown</title>
-  </head>
+		$('#example').countdown({
+			date: nextyear, // TODO Date format: 07/27/2017 17:00:00
+			offset: +2, // TODO Your Timezone Offset
+			day: 'Dag',
+			days: 'Dagen'
+		}, function () {
+			alert('Done!');
+		});
+	</script>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/epiksel/countdown">View on GitHub</a>
-
-          <h1 id="project_title">Countdown</h1>
-          <h2 id="project_tagline">jQuery CountDown Clock - Simple countdown plugin for product special offers</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/epiksel/countdown/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/epiksel/countdown/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="jquery-countdown-clock" class="anchor" href="#jquery-countdown-clock"><span class="octicon octicon-link"></span></a>jQuery Countdown Clock</h1>
-
-<p>jQuery countdown plugin that accounts for timezone.</p>
-<p><a id="demo_banner" href="http://epiksel.github.io/countdown/demo">DEMO PAGE</a> <a id="demo_banner" href="https://openix.io/en/product/preview?pid=57">OPENCART EXTENSION</a></p>
-
-<h1>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
-
-<div class="highlight highlight-JS"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'.countdown'</span><span class="p">).</span><span class="nx">countdown</span><span class="p">({</span>
-    <span class="nx">date</span><span class="o">:</span> <span class="s1">'07/27/2015 17:00:00'</span><span class="p">,</span>
-    <span class="nx">offset</span><span class="o">:</span> <span class="o">+</span><span class="mi">2</span><span class="p">,</span>
-    <span class="nx">day</span><span class="o">:</span> <span class="s1">'Day'</span><span class="p">,</span>
-    <span class="nx">days</span><span class="o">:</span> <span class="s1">'Days'</span>
-<span class="p">},</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s1">'Done!'</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-
-<h1>
-<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h1>
-
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>date</td>
-<td>Target date, ex <code>07/27/2015 17:00:00</code>
-</td>
-</tr>
-<tr>
-<td>offset</td>
-<td>UTC Timezone offset</td>
-</tr>
-<tr>
-<td>day</td>
-<td>a Day text</td>
-</tr>
-<tr>
-<td>days</td>
-<td>an Days text</td>
-</tr>
-<tr>
-<td>hour</td>
-<td>a Hour text</td>
-</tr>
-<tr>
-<td>hours</td>
-<td>an Hours text</td>
-</tr>
-<tr>
-<td>minute</td>
-<td>a Minute text</td>
-</tr>
-<tr>
-<td>minutes</td>
-<td>an Minutes text</td>
-</tr>
-<tr>
-<td>second</td>
-<td>a Seccond text</td>
-</tr>
-<tr>
-<td>seconds</td>
-<td>an Seconds text</td>
-</tr>
-</tbody>
-</table>
-
-<p>You can also append a callback function which is called when countdown finishes.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Countdown maintained by <a href="https://github.com/epiksel">E-Piksel</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-
-
-  </body>
+</body>
 </html>
