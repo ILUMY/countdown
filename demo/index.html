@@ -10,13 +10,13 @@
 </head>
 <body>
 	<ul id="example">
-		<li><span class="days">00</span><p class="days_text">Days</p></li>
+		<li><span class="days">00</span><p class="days_text">Dagen</p></li>
 		<li class="seperator">:</li>
-		<li><span class="hours">00</span><p class="hours_text">Hours</p></li>
+		<li><span class="hours">00</span><p class="hours_text">Uren</p></li>
 		<li class="seperator">:</li>
-		<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
+		<li><span class="minutes">00</span><p class="minutes_text">Minuten</p></li>
 		<li class="seperator">:</li>
-		<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
+		<li><span class="seconds">00</span><p class="seconds_text">Seconden</p></li>
 	</ul>
 
 	<script class="source" type="text/javascript">
@@ -25,22 +25,18 @@
 		var month = now.getMonth() + 1;
 		var year = now.getFullYear() + 1;
 
-		var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+		var nextyear = 7 + '/' + 2 + '/' + 2018 + ' 10:00:00';
 
 		$('#example').countdown({
 			date: nextyear, // TODO Date format: 07/27/2017 17:00:00
 			offset: +2, // TODO Your Timezone Offset
-			day: 'Day',
-			days: 'Days'
+			day: 'Dag',
+			days: 'Dagen'
 		}, function () {
-			alert('Done!');
+			//alert('Done!');
 		});
 	</script>
 
-	<ul id="buttons">
-		<li><a href="http://epiksel.github.io/countdown" class="btn download">Download</a></li>
-		<li><a href="https://openix.io/en/product/preview?pid=57" class="btn download">OpenCart Extension</a></li>
-		<li><a href="https://github.com/epiksel/countdown" class="btn forkme">Fork Me</a></li>
-	</ul>
+	
 </body>
 </html>
