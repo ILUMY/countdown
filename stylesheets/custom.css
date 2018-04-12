@@ -1,10 +1,20 @@
+body {
+  margin-top: 10px !important;
+  background-color: white;
+  color: black;
+}
+
 p#title {
   text-align: center;
-
+  color: black;
 }
 
 ul#example {
-  margin: 10px 10px;
+  margin: 0;
+}
+
+ul#example > li > span {
+  line-height: 60px !important;
 }
 
 p#title {
@@ -15,31 +25,26 @@ p#title {
 .days {
   font-size: 20px !important;
   margin: 0 !important;
-
 }
 
 .days, .days_text {
   font-size: 20px !important;
   margin: 0 !important;
-
 }
 
 .hours, .hours_text {
   font-size: 20px !important;
   margin: 0 !important;
-
 }
 
 .minutes, .minutes_text {
   font-size: 20px !important;
   margin: 0 !important;
-
 }
 
 .seconds, .seconds_text {
   font-size: 20px !important;
   margin: 0 !important;
-
 }
 
 .seperator, .seperator_text {
