@@ -1,0 +1,48 @@
+p#title {
+  text-align: center;
+
+}
+
+ul#example {
+  margin: 10px 10px;
+}
+
+p#title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.days {
+  font-size: 20px !important;
+  margin: 0 !important;
+
+}
+
+.days, .days_text {
+  font-size: 20px !important;
+  margin: 0 !important;
+
+}
+
+.hours, .hours_text {
+  font-size: 20px !important;
+  margin: 0 !important;
+
+}
+
+.minutes, .minutes_text {
+  font-size: 20px !important;
+  margin: 0 !important;
+
+}
+
+.seconds, .seconds_text {
+  font-size: 20px !important;
+  margin: 0 !important;
+
+}
+
+.seperator, .seperator_text {
+  font-size: 20px !important;
+  margin: 0 !important;
+}
