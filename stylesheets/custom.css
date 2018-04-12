@@ -17,6 +17,10 @@ ul#example > li > span {
   line-height: 60px !important;
 }
 
+ul#example > li > p {
+  color: black;
+}
+
 p#title {
   font-size: 20px;
   margin: 0;
