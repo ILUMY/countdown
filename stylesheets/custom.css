@@ -21,6 +21,10 @@ ul#example > li > p {
   color: black;
 }
 
+ul#example > li.seperator {
+  line-height: 60px;
+}
+
 p#title {
   font-size: 20px;
   margin: 0;
@@ -31,23 +35,37 @@ p#title {
   margin: 0 !important;
 }
 
-.days, .days_text {
+.days_text {
+  font-size: 16px !important;
+  margin: 0 !important;
+}
+
+.hours {
   font-size: 20px !important;
   margin: 0 !important;
 }
 
-.hours, .hours_text {
+.hours_text {
+  font-size: 16px !important;
+}
+
+.minutes {
   font-size: 20px !important;
   margin: 0 !important;
 }
 
-.minutes, .minutes_text {
+.minutes_text {
+  font-size: 16px !important;
+  margin: 0 !important;
+}
+
+.seconds {
   font-size: 20px !important;
   margin: 0 !important;
 }
 
-.seconds, .seconds_text {
-  font-size: 20px !important;
+.seconds_text {
+  font-size: 16px !important;
   margin: 0 !important;
 }
 
