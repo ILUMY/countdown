@@ -47,6 +47,7 @@ p#title {
 
 .hours_text {
   font-size: 16px !important;
+  margin: 0 !important;
 }
 
 .minutes {
